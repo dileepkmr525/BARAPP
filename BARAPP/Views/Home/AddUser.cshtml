@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BARAPP.Models.Credentials>
+
+@{
+    ViewData["Title"] = "AddUser";
+}
+
+
+<p>
+    <a asp-action="CreateUser">Create New User</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+           @*      @Html.DisplayFor(modelItem => item.Password) *@
+                    <input type="password" value="********" readonly class="form-control-plaintext" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditUser", new { UserID=item.UserID }) |                
+                    @Html.ActionLink("Delete", "DeleteUser", new { UserID = item.UserID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

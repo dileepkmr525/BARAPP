@@ -1,0 +1,173 @@
+﻿@model BARAPP.Models.Brand
+
+@{
+    ViewData["Title"] = "AddNewBrand";
+}
+
+<hr />
+<style>
+    .form-group
+    {
+        padding-top:8px;
+        margin-top:8px
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="AddNewBrand">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="BrandName" class="control-label"></label>
+                <input asp-for="BrandName" class="form-control" />
+                <span asp-validation-for="BrandName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <select asp-for="CategoryName" asp-items="ViewBag.Categories" class="form-control">
+                    <option value="">-- Select Category --</option>
+                </select>
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedDate" class="control-label"></label>
+                <input asp-for="ModifiedDate" class="form-control" />
+                <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+            </div>
+
+
+            <!-- L row -->
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label asp-for="OpenStockL" class="control-label"></label>
+                    <input asp-for="OpenStockL" class="form-control" />
+                    <span asp-validation-for="OpenStockL" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerCaseL" class="control-label"></label>
+                    <input asp-for="CostPerCaseL" class="form-control" />
+                    <span asp-validation-for="CostPerCaseL" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerBottleL" class="control-label"></label>
+                    <input asp-for="CostPerBottleL" class="form-control" />
+                    <span asp-validation-for="CostPerBottleL" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="SalePriceL" class="control-label"></label>
+                    <input asp-for="SalePriceL" class="form-control" />
+                    <span asp-validation-for="SalePriceL" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <!-- Q row -->
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label asp-for="OpenStockQ" class="control-label"></label>
+                    <input asp-for="OpenStockQ" class="form-control" />
+                    <span asp-validation-for="OpenStockQ" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerCaseQ" class="control-label"></label>
+                    <input asp-for="CostPerCaseQ" class="form-control" />
+                    <span asp-validation-for="CostPerCaseQ" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerBottleQ" class="control-label"></label>
+                    <input asp-for="CostPerBottleQ" class="form-control" />
+                    <span asp-validation-for="CostPerBottleQ" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="SalePriceQ" class="control-label"></label>
+                    <input asp-for="SalePriceQ" class="form-control" />
+                    <span asp-validation-for="SalePriceQ" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- P row -->
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label asp-for="OpenStockP" class="control-label"></label>
+                    <input asp-for="OpenStockP" class="form-control" />
+                    <span asp-validation-for="OpenStockP" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerCaseP" class="control-label"></label>
+                    <input asp-for="CostPerCaseP" class="form-control" />
+                    <span asp-validation-for="CostPerCaseP" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerBottleP" class="control-label"></label>
+                    <input asp-for="CostPerBottleP" class="form-control" />
+                    <span asp-validation-for="CostPerBottleP" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="SalePriceP" class="control-label"></label>
+                    <input asp-for="SalePriceP" class="form-control" />
+                    <span asp-validation-for="SalePriceP" class="text-danger"></span>
+                </div>
+            </div>
+
+            <!-- N row -->
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label asp-for="OpenStockN" class="control-label"></label>
+                    <input asp-for="OpenStockN" class="form-control" />
+                    <span asp-validation-for="OpenStockN" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerCaseN" class="control-label"></label>
+                    <input asp-for="CostPerCaseN" class="form-control" />
+                    <span asp-validation-for="CostPerCaseN" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerBottleN" class="control-label"></label>
+                    <input asp-for="CostPerBottleN" class="form-control" />
+                    <span asp-validation-for="CostPerBottleN" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="SalePriceN" class="control-label"></label>
+                    <input asp-for="SalePriceN" class="form-control" />
+                    <span asp-validation-for="SalePriceN" class="text-danger"></span>
+                </div>
+            </div>
+
+           
+
+            <!-- D row -->
+            <div class="row">
+                <div class="col-md-3 form-group">
+                    <label asp-for="OpenStockD" class="control-label"></label>
+                    <input asp-for="OpenStockD" class="form-control" />
+                    <span asp-validation-for="OpenStockD" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerCaseD" class="control-label"></label>
+                    <input asp-for="CostPerCaseD" class="form-control" />
+                    <span asp-validation-for="CostPerCaseD" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="CostPerBottleD" class="control-label"></label>
+                    <input asp-for="CostPerBottleD" class="form-control" />
+                    <span asp-validation-for="CostPerBottleD" class="text-danger"></span>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label asp-for="SalePriceD" class="control-label"></label>
+                    <input asp-for="SalePriceD" class="form-control" />
+                    <span asp-validation-for="SalePriceD" class="text-danger"></span>
+                </div>
+            </div>
+
+           
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BARAPP", "BARAPP\BARAPP.csproj", "{D42E9C7D-27B7-4EBD-8D06-4B06249BFADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D42E9C7D-27B7-4EBD-8D06-4B06249BFADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42E9C7D-27B7-4EBD-8D06-4B06249BFADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42E9C7D-27B7-4EBD-8D06-4B06249BFADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42E9C7D-27B7-4EBD-8D06-4B06249BFADA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC00AB1F-A0AB-46A9-91A5-34DDD3D13DC3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BARAPP.Models.Brand>
+
+@{
+    ViewData["Title"] = "AddBrand";
+}
+
+
+
+<p>
+    <a asp-action="AddNewBrand">Add New Brand</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>           
+            <td>
+                @Html.ActionLink("Edit", "EditBrand", new { BrandName=item.BrandName }) |
+                    @Html.ActionLink("Delete", "DeleteBrand", new { BrandName = item.BrandName })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

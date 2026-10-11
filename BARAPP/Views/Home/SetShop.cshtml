@@ -1,0 +1,40 @@
+﻿@{
+    var currentShop = Context.Session.GetString("ShopName");
+}
+@model IEnumerable<BARAPP.Models.Shop>
+
+@{
+    ViewData["Title"] = "SetShop";
+}
+<p>
+    <a asp-action="AddShop">Add Shop</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShopName)
+                </td>
+                <td>
+                    @if (currentShop != null && currentShop==item.ShopName)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                    @Html.ActionLink("Set As Current Shop", "SetCurrentShop", new { ShopName=item.ShopName }) 
+                    }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
